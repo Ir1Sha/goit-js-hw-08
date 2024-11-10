@@ -84,20 +84,19 @@ function createMarkup(arr) {
     ).join("")
 }
 
+const instance = basicLightbox.create(`
+<img src="#" alt="#" width="800" heigth="600">
+`);
+
 function handleClick(event) {
     event.preventDefault()
-if(event.target === event.currentTarget) {
+if(event.target.nodeName !== "IMG") {
     return;
 }
 
-const currentImage = event.target.closest(".gallery-item");
-console.log(currentImage);
-const instance = basicLightbox.create(`
-<div class =  "modal">
-<img src = "${event.target.original}" alt="${event.target.description}>
-</div
-`);
-
+const element = instance.element().querySelector("img");
+console.log(element);
+element.src=event.target.dataset.source;
+element.alt=event.target.alt;
 instance.show();
-// console.log("target", event.target);
 }
