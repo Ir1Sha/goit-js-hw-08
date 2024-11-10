@@ -77,6 +77,8 @@ function createMarkup(arr) {
       src="${image.preview}"
       data-source="${image.original}"
       alt="${image.description}"
+      width="360"
+      height="200"
     />
   </a>
 </li>
