@@ -87,7 +87,7 @@ function createMarkup(arr) {
 }
 
 const instance = basicLightbox.create(`
-<img src="#" alt="#" width="800" heigth="600">
+<img src="#" alt="#" width="800" height="600">
 `);
 
 function handleClick(event) {
